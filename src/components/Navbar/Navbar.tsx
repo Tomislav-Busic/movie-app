@@ -3,7 +3,7 @@ import styled from "./navbar.module.scss";
 
 export const Navbar = () => {
     return (
-        <div className="navbar">
+        <div className={styled.navbar}>
 
         </div>
     )
