@@ -5,6 +5,7 @@ import "./styles/app.scss";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage";
 import { MoviePage } from "./pages/MoviePage/MoviePage";
+import { AndroidNavbar } from "./components/AndroidNavbar/AndroidNavbar";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/movie/:id" element={<MoviePage />} />
         </Routes>
+        <AndroidNavbar />
       </Router>
     </div>
   );
