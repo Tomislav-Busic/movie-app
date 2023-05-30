@@ -1,0 +1,9 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 121.22px;
+  height: 16px;
+}/*# sourceMappingURL=logo.module.css.map */

@@ -1,0 +1,10 @@
+@import "../../../styles/mixins/mixins.scss";
+
+.logo {
+  @include center;
+
+  img {
+    width: 121.22px;
+    height: 16px;
+  }
+}
