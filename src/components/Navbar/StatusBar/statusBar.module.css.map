@@ -1,1 +1,1 @@
-{"version":3,"sources":["statusBar.module.scss","statusBar.module.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,YAAA;EACA,sBAAA;ACCF;ADCE;EACE,YAAA;EACA,YAAA;EACA,YAAA;EACA,qBAAA;ACCJ","file":"statusBar.module.css"}
+{"version":3,"sources":["statusBar.module.scss","statusBar.module.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,YAAA;ACCF;ADCE;EACE,YAAA;EACA,YAAA;EACA,YAAA;EACA,qBAAA;ACCJ","file":"statusBar.module.css"}
