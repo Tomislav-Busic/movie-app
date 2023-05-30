@@ -5,6 +5,10 @@
 .status .bar {
   width: 118px;
   height: 100%;
+  padding-left: 10px;
   float: right;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }/*# sourceMappingURL=statusBar.module.css.map */
