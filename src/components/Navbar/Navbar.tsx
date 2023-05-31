@@ -1,5 +1,5 @@
 import { Logo } from "./logo/Logo";
-import { StatusBar } from "./statusBar/StatusBar";
+import { StatusBar } from "./statusbar/Statusbar";
 import styled from "./navbar.module.scss";
 
 export const Navbar = () => {
