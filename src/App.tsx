@@ -1,12 +1,13 @@
-import "./styles/app.scss";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { HomePage } from "./pages/homePage/HomePage";
 import { FavoritesPage } from "./pages/favoritesPage/FavoritesPage";
 import { MoviePage } from "./pages/moviePage/MoviePage";
+
 import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
 import { Navbar } from "./layouts/navbar/Navbar";
+
+import "./styles/app.scss";
 
 function App() {
   return (
