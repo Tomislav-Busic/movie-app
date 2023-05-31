@@ -1,11 +1,10 @@
-import { Navbar } from "./components/navbar/Navbar";
+import { Navbar } from "./layouts/navbar/Navbar";
 import "./styles/app.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./styles/app.scss";
 import { HomePage } from "./pages/homePage/HomePage";
 import { FavoritesPage } from "./pages/favoritesPage/FavoritesPage";
 import { MoviePage } from "./pages/moviePage/MoviePage";
-import { AndroidNavbar } from "./components/androidNavbar/AndroidNavbar";
+import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
 
 function App() {
   return (
