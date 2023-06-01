@@ -8,6 +8,7 @@ import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
 import { Navbar } from "./layouts/navbar/Navbar";
 
 import "./assets/styles/app.scss";
+import { Footer } from "./layouts/footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/movie/:id" element={<MoviePage />} />
         </Routes>
+        <Footer />
         <AndroidNavbar />
       </Router>
     </div>
