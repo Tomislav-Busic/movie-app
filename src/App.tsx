@@ -6,9 +6,9 @@ import { MoviePage } from "./pages/moviePage/MoviePage";
 
 import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
 import { Navbar } from "./layouts/navbar/Navbar";
+import { Footer } from "./layouts/footer/Footer";
 
 import "./assets/styles/app.scss";
-import { Footer } from "./layouts/footer/Footer";
 
 function App() {
   return (
