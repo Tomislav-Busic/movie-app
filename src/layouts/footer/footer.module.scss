@@ -18,7 +18,9 @@
             width: 94px;
             height: 56px;
             @include center-direction(column);
+            text-decoration: none;
             gap: 10px;
+                
 
             img {
                 width: 18px;

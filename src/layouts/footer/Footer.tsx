@@ -11,17 +11,13 @@ export const Footer = () => {
     return (
         <div className={styled.footer}>
             <div className={styled.container}>
-                <Link to="/">
-                    <div className={styled.frame}>
-                        <img src={homeB} alt="home" />
-                        <p>Home</p>
-                    </div>
+                <Link to="/" className={styled.frame}>
+                    <img src={homeB} alt="home" />
+                    <p>Home</p>
                 </Link>
-                <Link to="/favorites">
-                    <div className={styled.frame}>
-                        <img src={favoritesW} alt="favorites" />
-                        <p className={styled.active}>Favorites</p>
-                    </div>
+                <Link to="/favorites" className={styled.frame}>
+                    <img src={favoritesW} alt="favorites" />
+                    <p className={styled.active}>Favorites</p>
                 </Link>
             </div>
         </div>
