@@ -32,6 +32,10 @@
                 line-height: 12px;
                 text-align: center;
                 color: $bg-blue;
+
+                .active {
+                    color: $gray;
+                }
             }
         }
     }
