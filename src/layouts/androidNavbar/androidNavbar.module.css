@@ -11,4 +11,16 @@
   width: 210px;
   height: 13px;
   display: flex;
+  justify-content: space-between;
+}
+.and_navbar .buttons .img_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+}
+.and_navbar .buttons .img_container:first-child {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=androidNavbar.module.css.map */
