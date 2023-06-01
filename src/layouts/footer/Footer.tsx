@@ -28,7 +28,7 @@ export const Footer = () => {
                     onClick={() => setToogle(false)}
                 >
                     <img src={toogle ? homeW : homeB} alt="home" />
-                    <p>Home</p>
+                    <p className={toogle ? styled.active : ""}>Home</p>
                 </Link>
                 <Link
                     to="/favorites"
@@ -36,9 +36,10 @@ export const Footer = () => {
                     onClick={() => setToogle(true)}
                 >
                     <img src={toogle ? favoritesB : favoritesW} alt="favorites" />
-                    <p className={styled.active}>Favorites</p>
+                    <p className={toogle ? "" : styled.active}>Favorites</p>
                 </Link>
             </div>
         </div>
     )
 }
+
