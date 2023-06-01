@@ -3,7 +3,7 @@ import cellular from "../../../assets/images/cellular.png";
 import time from "../../../assets/images/time.png";
 import wifi from "../../../assets/images/wifi.png";
 
-import styled from "./statusBar.module.scss";
+import styled from "./statusbar.module.scss";
 
 
 export const StatusBar = () => {
