@@ -33,7 +33,7 @@
                 text-align: center;
                 color: $bg-blue;
 
-                .active {
+                &.active {
                     color: $gray;
                 }
             }

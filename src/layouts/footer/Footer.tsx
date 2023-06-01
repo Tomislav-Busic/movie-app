@@ -15,7 +15,7 @@ export const Footer = () => {
                 </div>
                 <div className={styled.frame}>
                     <img src={favoritesW} alt="favorites" />
-                    <p>Favorites</p>
+                    <p className={styled.active}>Favorites</p>
                 </div>
             </div>
         </div>
