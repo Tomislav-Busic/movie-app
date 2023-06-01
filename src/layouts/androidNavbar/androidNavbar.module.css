@@ -10,4 +10,5 @@
 .and_navbar .buttons {
   width: 210px;
   height: 13px;
+  display: flex;
 }/*# sourceMappingURL=androidNavbar.module.css.map */
