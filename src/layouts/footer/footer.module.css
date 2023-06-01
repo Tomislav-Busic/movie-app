@@ -17,4 +17,19 @@
   width: 94px;
   height: 56px;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .container .frame img {
+  width: 18px;
+  height: 18px;
+}
+.footer .container .frame p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
 }/*# sourceMappingURL=footer.module.css.map */
