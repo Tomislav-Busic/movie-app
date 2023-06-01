@@ -1,4 +1,5 @@
 @import "../../assets/styles/mixins/mixins.scss";
+@import "../../assets/styles/variables/variables.scss";
 
 .footer {
     position: fixed;
@@ -16,8 +17,8 @@
         .frame {
             width: 94px;
             height: 56px;
-            border: 1px solid black;
             @include center-direction(column);
+            gap: 10px;
 
             img {
                 width: 18px;
@@ -26,10 +27,11 @@
 
             p {
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 10px;
                 line-height: 12px;
                 text-align: center;
+                color: $bg-blue;
             }
         }
     }
