@@ -7,7 +7,7 @@ import { MoviePage } from "./pages/moviePage/MoviePage";
 import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
 import { Navbar } from "./layouts/navbar/Navbar";
 
-import "./styles/app.scss";
+import "./assets/styles/app.scss";
 
 function App() {
   return (
