@@ -10,6 +10,7 @@
   .buttons {
     width: 210px;
     height: 13px;
+    @include flex-space;
 
     .img_container {
       width: 15px;
