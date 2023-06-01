@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import homeB from "../../assets/images/home-blue.png";
 import homeW from "../../assets/images/home-white.png";
@@ -7,16 +9,33 @@ import favoritesW from "../../assets/images/favorites-white.png";
 
 import styled from "./footer.module.scss";
 
+
 export const Footer = () => {
+    const [toogle, setToogle] = useState<boolean>(false);
+    let location = useLocation();
+
+    useEffect(() => {
+        location.pathname !== "/" ? setToogle(true) : setToogle(false);
+    }, [])
+
+
     return (
         <div className={styled.footer}>
             <div className={styled.container}>
-                <Link to="/" className={styled.frame}>
-                    <img src={homeB} alt="home" />
+                <Link
+                    to="/"
+                    className={styled.frame}
+                    onClick={() => setToogle(false)}
+                >
+                    <img src={toogle ? homeW : homeB} alt="home" />
                     <p>Home</p>
                 </Link>
-                <Link to="/favorites" className={styled.frame}>
-                    <img src={favoritesW} alt="favorites" />
+                <Link
+                    to="/favorites"
+                    className={styled.frame}
+                    onClick={() => setToogle(true)}
+                >
+                    <img src={toogle ? favoritesB : favoritesW} alt="favorites" />
                     <p className={styled.active}>Favorites</p>
                 </Link>
             </div>
