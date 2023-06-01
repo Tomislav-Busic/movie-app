@@ -8,13 +8,13 @@
   align-items: center;
 }
 .footer .container {
-  width: 210px;
+  width: 220px;
   height: 56px;
   display: flex;
   justify-content: space-between;
 }
 .footer .container .frame {
-  width: 86px;
+  width: 94px;
   height: 56px;
   border: 1px solid black;
 }/*# sourceMappingURL=footer.module.css.map */
