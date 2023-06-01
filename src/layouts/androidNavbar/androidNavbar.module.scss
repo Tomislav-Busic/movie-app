@@ -13,13 +13,13 @@
     @include flex-space;
 
     .img_container {
-      @include center;
-      width: 15px;
-      height: 15px;
-
       &:first-child {
        @include flex-space; 
       }
+      
+      @include center;
+      width: 15px;
+      height: 15px;
     }
   }
 }
