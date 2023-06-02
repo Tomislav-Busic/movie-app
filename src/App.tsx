@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { HomePage } from "./pages/HomePage";
-import { FavoritesPage } from "./pages/FavoritesPage";
-
 import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
 import { Header } from "./layouts/header/Header";
 import { Navbar } from "./layouts/navbar/Navbar";
+
+import { HomePage } from "./pages/HomePage";
+import { FavoritesPage } from "./pages/FavoritesPage";
 
 import "./assets/styles/app.scss";
 
