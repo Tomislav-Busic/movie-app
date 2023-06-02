@@ -7,7 +7,7 @@ import homeW from "../../assets/images/home-white.png";
 import favoritesB from "../../assets/images/favorites-blue.png";
 import favoritesW from "../../assets/images/favorites-white.png";
 
-import styled from "./footer.module.scss";
+import styled from "./navbar.module.scss";
 
 export const Navbar = () => {
     const [toogle, setToogle] = useState<boolean>(false);
