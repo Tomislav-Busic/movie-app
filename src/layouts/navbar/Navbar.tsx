@@ -26,7 +26,7 @@ export const Navbar = () => {
                 >
                     {
                         toogle ?
-                            <AiOutlineHome className={styled.icon} />
+                            <AiOutlineHome className={styled.icon__gray} />
                             :
                             <AiFillHome className={styled.icon} />
                     }
@@ -42,7 +42,7 @@ export const Navbar = () => {
                         toogle ?
                             <MdFavorite className={styled.icon} />
                             :
-                            <MdOutlineFavoriteBorder className={styled.icon} />
+                            <MdOutlineFavoriteBorder className={styled.icon__gray} />
                     }
                     <p className={toogle ? "" : styled.active}>Favorites</p>
                 </Link>
