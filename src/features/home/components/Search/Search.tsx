@@ -10,7 +10,7 @@ export const Search = () => {
                 <input placeholder="Search" />
                 <AiOutlineClose className={styled.icon} />
             </div>
-            <button>Close</button>
+            <button>Cancel</button>
         </div>
     )
 }
