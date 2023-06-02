@@ -2,10 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-import homeB from "../../assets/images/home-blue.png";
-import homeW from "../../assets/images/home-white.png";
-import favoritesB from "../../assets/images/favorites-blue.png";
-import favoritesW from "../../assets/images/favorites-white.png";
+import { AiFillHome, AiOutlineHome, } from "react-icons/ai";
+import { MdFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
 
 import styled from "./navbar.module.scss";
 
@@ -26,7 +24,13 @@ export const Navbar = () => {
                     className={styled.frame}
                     onClick={() => setToogle(false)}
                 >
-                    <img src={toogle ? homeW : homeB} alt="home" />
+                    {
+                        toogle ?
+                            <AiOutlineHome className={styled.icon} />
+                            :
+                            <AiFillHome className={styled.icon} />
+                    }
+
                     <p className={toogle ? styled.active : ""}>Home</p>
                 </Link>
                 <Link
@@ -34,7 +38,12 @@ export const Navbar = () => {
                     className={styled.frame}
                     onClick={() => setToogle(true)}
                 >
-                    <img src={toogle ? favoritesB : favoritesW} alt="favorites" />
+                    {
+                        toogle ?
+                            <MdFavorite className={styled.icon} />
+                            :
+                            <MdOutlineFavoriteBorder className={styled.icon} />
+                    }
                     <p className={toogle ? "" : styled.active}>Favorites</p>
                 </Link>
             </div>

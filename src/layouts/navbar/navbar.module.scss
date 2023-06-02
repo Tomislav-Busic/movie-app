@@ -21,9 +21,13 @@
             text-decoration: none;
             gap: 10px;   
 
-            img {
+            .icon {
                 width: 18px;
                 height: 18px;
+
+                &.gray {
+                    fill: $gray;
+                }
             }
 
             p {
