@@ -10,4 +10,15 @@
     gap: 4px;
     background: $bg-search;
     border-radius: 10px; 
+
+    input {
+        padding: 4px;
+        border: none;
+        outline: none;
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
 }
