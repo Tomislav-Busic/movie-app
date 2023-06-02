@@ -15,7 +15,7 @@ export const Navbar = () => {
 
     useEffect(() => {
         location.pathname !== "/" ? setToogle(true) : setToogle(false);
-    }, [])
+    }, [location.pathname])
 
 
     return (
