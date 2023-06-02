@@ -1,6 +1,6 @@
 import { Logo } from "./logo/Logo";
 import { StatusBar } from "./statusbar/Statusbar";
-import styled from "./navbar.module.scss";
+import styled from "./header.module.scss";
 
 export const Header = () => {
     return (
