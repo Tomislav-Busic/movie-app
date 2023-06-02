@@ -1,3 +1,9 @@
+import styled from "./pages.module.scss";
+
 export const Favorites = () => {
-    return <h1>Favorites</h1>
+    return (
+        <div className={styled.page}>
+            <h1>Favorites</h1>
+        </div>
+    );
 }
