@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     padding: 8px 16px;
-    width: 324px;
+    width: 274px;
     height: 46px;
     gap: 4px;
     background: $bg-search;
@@ -13,13 +13,19 @@
 
     input {
         padding: 4px;
+        width: 185px;
+        height: 30px;
         border: none;
         outline: none;
         background: $bg-search;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
     }
 
     .icon {
-        width: 24px;
-        height: 24px;
+        width: 18.75px;
+        height: 18.75px;    
     }
 }
