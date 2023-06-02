@@ -35,5 +35,14 @@
             width: 18.75px;
             height: 18.75px;    
         }
-    }   
+    } 
+
+    button {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $bg-blue;
+        background: none;
+        border: none;
+    }  
 }
