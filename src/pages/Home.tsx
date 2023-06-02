@@ -1,3 +1,9 @@
+import styled from "./pages.module.scss";
+
 export const Home = () => {
-    return <h1>Home</h1>
+    return (
+        <div className={styled.page}>
+            <h1>Home</h1>
+        </div>
+    );
 }
