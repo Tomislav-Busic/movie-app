@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { HomePage } from "./pages/homePage";
-import { FavoritesPage } from "./pages/favoritesPage";
-import { MoviePage } from "./pages/moviePage";
+import Home from "./pages/Home";
+import { Favorite } from "./pages/favoritesPage";
+import { Movie } from "./pages/Movie";
 
 import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
 import { Navbar } from "./layouts/navbar/Navbar";
@@ -16,9 +16,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="/movie/:id" element={<MoviePage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/movie/:id" element={<Movie />} />
         </Routes>
         <Footer />
         <AndroidNavbar />
