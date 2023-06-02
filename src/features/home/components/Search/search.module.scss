@@ -3,6 +3,7 @@
 
 .search_container {
     padding: 0 20px;
+    max-width: 400px;
     width: 100%;
     @include flex-space;
 
