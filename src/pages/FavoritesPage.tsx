@@ -1,9 +1,11 @@
+import { Favorites } from "../features/favorites";
+
 import styled from "./pages.module.scss";
 
-export const Favorites = () => {
+export const FavoritesPage = () => {
     return (
         <div className={styled.page}>
-            <h1>Favorites</h1>
+            <Favorites />
         </div>
     );
 }

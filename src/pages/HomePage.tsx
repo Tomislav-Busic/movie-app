@@ -1,9 +1,11 @@
+import { Home } from "../features/home";
+
 import styled from "./pages.module.scss";
 
-export const Home = () => {
+export const HomePage = () => {
     return (
         <div className={styled.page}>
-            <h1>Home</h1>
+            <Home />
         </div>
     );
 }
