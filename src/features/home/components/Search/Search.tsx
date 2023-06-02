@@ -1,6 +1,8 @@
+import styled from "./search.module.scss";
+
 export const Search = () => {
     return (
-        <div>
+        <div className={styled.search}>
 
         </div>
     )
