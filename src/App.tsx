@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { HomePage } from "./pages/homePage/HomePage";
+import { HomePage } from "./pages/homePage";
 import { FavoritesPage } from "./pages/favoritesPage";
-import { MoviePage } from "./pages/moviePage/MoviePage";
+import { MoviePage } from "./pages/moviePage";
 
 import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
 import { Navbar } from "./layouts/navbar/Navbar";
