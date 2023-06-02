@@ -5,9 +5,9 @@ import styled from "./search.module.scss";
 export const Search = () => {
     return (
         <div className={styled.search}>
-            <AiOutlineSearch />
+            <AiOutlineSearch className={styled.icon} />
             <input placeholder="Search" />
-            <AiOutlineClose />
+            <AiOutlineClose className={styled.icon} />
         </div>
     )
 }
