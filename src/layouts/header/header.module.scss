@@ -1,0 +1,11 @@
+@import "../../assets/styles/variables/variables.scss";
+@import "../../assets/styles/mixins/mixins.scss";
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: $bg-blue;
+  display: flex;
+  flex-direction: column;
+}

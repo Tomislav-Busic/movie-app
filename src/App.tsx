@@ -4,8 +4,8 @@ import { HomePage } from "./pages/HomePage";
 import { FavoritesPage } from "./pages/FavoritesPage";
 
 import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
+import { Header } from "./layouts/header/Header";
 import { Navbar } from "./layouts/navbar/Navbar";
-import { Footer } from "./layouts/footer/Footer";
 
 import "./assets/styles/app.scss";
 
@@ -13,12 +13,12 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Navbar />
+        <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>
-        <Footer />
+        <Navbar />
         <AndroidNavbar />
       </Router>
     </div>
