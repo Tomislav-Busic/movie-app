@@ -13,9 +13,9 @@ test("increments counter", () => {
 
     //interact with those elements
     fireEvent.click(homebtn);
-    const location = window.location.href;
+    let assignSpy = jest.spyOn(window.location, 'assign')
     //assert the expected result
-    expect(location).toBe("http://localhost:3000/");
+    expect(assignSpy).toBe("http://localhost:3000/");
 });
 
 
