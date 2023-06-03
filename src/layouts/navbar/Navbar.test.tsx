@@ -1,18 +1,21 @@
 import { render, fireEvent, screen } from "@testing-library/react";
 import { Navbar } from "./Navbar";
 
+
+
 //test block
 test("increments counter", () => {
     // render the component on virtual dom
     render(<Navbar />);
 
     //select the elements you want to interact with
-    const counter = screen.getByTestId("counter");
-    const incrementBtn = screen.getByTestId("increment");
+    const homebtn = screen.getByTestId("home_btn");
 
     //interact with those elements
-    fireEvent.click(incrementBtn);
-
+    fireEvent.click(homebtn);
+    const location = window.location.href;
     //assert the expected result
-    expect(counter).toHaveTextContent("1");
+    expect(location).toBe("http://localhost:3000/");
 });
+
+
