@@ -21,6 +21,7 @@ export const Navbar = () => {
             <div className={styled.container}>
                 <Link
                     to="/"
+                    id="home_btn"
                     className={styled.frame}
                     onClick={() => setToogle(false)}
                 >
