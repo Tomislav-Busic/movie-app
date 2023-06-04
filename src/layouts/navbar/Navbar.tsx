@@ -15,6 +15,14 @@ export const Navbar = () => {
         location.pathname !== "/" ? setToogle(true) : setToogle(false);
     }, [location.pathname])
 
+    const toHomePage = () => {
+        setToogle(false)
+    }
+
+    const toFavoritesPage = () => {
+        setToogle(true)
+    }
+
 
     return (
         <div className={styled.footer}>
@@ -23,7 +31,7 @@ export const Navbar = () => {
                     to="/"
                     id="homebtn"
                     className={styled.frame}
-                    onClick={() => setToogle(false)}
+                    onClick={toHomePage}
                 >
                     {
                         toogle ?
@@ -37,7 +45,7 @@ export const Navbar = () => {
                 <Link
                     to="/favorites"
                     className={styled.frame}
-                    onClick={() => setToogle(true)}
+                    onClick={toFavoritesPage}
                 >
                     {
                         toogle ?

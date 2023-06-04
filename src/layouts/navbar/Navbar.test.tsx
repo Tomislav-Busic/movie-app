@@ -1,15 +1,25 @@
-/* import { render, fireEvent, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event'
+import '@testing-library/jest-dom';
 import { Navbar } from "./Navbar";
 
 
-test('loads items eventually', async () => {
-    render(<Navbar />)
+//test block
+test("testing home location", () => {
+    // render the component on virtual dom
+    render(<Navbar />);
 
-    // Click button
-    fireEvent.click(screen.getByText('homebtn'))
+    let state = false;
+    //select the elements you want to interact with
+    const homebtn = screen.getByTestId("homebtn");
 
-    // Wait for page to update with query text
-    const items = await screen.findAllByText(/Item #[0-9]: /)
-    expect(items).toHaveLength(10)
-}) */
+    //interact with those elements
+
+    userEvent.click(homebtn);
+
+    expect(state).toBe(false);
+
+
+});
+
 
