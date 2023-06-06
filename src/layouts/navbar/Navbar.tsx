@@ -8,7 +8,7 @@ import { MdFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
 import styled from "./navbar.module.scss";
 
 export const Navbar = () => {
-    const [toogle, setToogle] = useState<boolean>(false);
+    const [toogle, setToogle] = useState(false);
     let location = useLocation();
 
     useEffect(() => {
