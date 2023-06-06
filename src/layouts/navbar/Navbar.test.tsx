@@ -12,7 +12,21 @@ test("testing home button", () => {
     const buttonElement = screen.getByText("Home");
     fireEvent.click(buttonElement);
 
+
     expect(divElement).toBeInTheDocument();
 });
+
+//test Favorite button
+test("testing favorite button", () => {
+    render(<MemoryRouter><Navbar /></MemoryRouter>);
+
+    const divElement = screen.getByRole("favoriteBlue");
+    const buttonElement = screen.getByText("Favorite");
+    fireEvent.click(buttonElement);
+
+
+    expect(divElement).toBeInTheDocument();
+});
+
 
 

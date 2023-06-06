@@ -48,7 +48,7 @@ export const Navbar = () => {
                 >
                     {
                         toogle ?
-                            <MdFavorite role="favoritBlue" className={styled.icon} />
+                            <MdFavorite role="favoriteBlue" className={styled.icon} />
                             :
                             <MdOutlineFavoriteBorder className={styled.icon__gray} />
                     }
