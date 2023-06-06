@@ -29,15 +29,14 @@ export const Navbar = () => {
             <div className={styled.container}>
                 <Link
                     to="/"
-                    id="homebtn"
                     className={styled.frame}
                     onClick={toHomePage}
                 >
                     {
                         toogle ?
-                            <AiOutlineHome className={styled.icon__gray} />
+                            <AiOutlineHome role="homeGray" className={styled.icon__gray} />
                             :
-                            <AiFillHome className={styled.icon} />
+                            <AiFillHome role="homeBlue" className={styled.icon} />
                     }
 
                     <p className={toogle ? styled.active : ""}>Home</p>
@@ -49,9 +48,9 @@ export const Navbar = () => {
                 >
                     {
                         toogle ?
-                            <MdFavorite className={styled.icon} />
+                            <MdFavorite role="favoriteBlue" className={styled.icon} />
                             :
-                            <MdOutlineFavoriteBorder className={styled.icon__gray} />
+                            <MdOutlineFavoriteBorder role="favoriteGray" className={styled.icon__gray} />
                     }
                     <p className={toogle ? "" : styled.active}>Favorites</p>
                 </Link>
