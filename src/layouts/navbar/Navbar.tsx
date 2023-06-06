@@ -13,15 +13,15 @@ export const Navbar = () => {
 
     useEffect(() => {
         location.pathname !== "/" ? setToogle(true) : setToogle(false);
-    }, [location.pathname])
+    }, [location.pathname]);
 
     const toHomePage = () => {
         setToogle(false)
-    }
+    };
 
     const toFavoritesPage = () => {
         setToogle(true)
-    }
+    };
 
 
     return (
