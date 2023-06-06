@@ -17,15 +17,16 @@ test("testing home button", () => {
 });
 
 //test Favorite button
-test("testing favorite button", () => {
+test("testing favorite button", async () => {
     render(<MemoryRouter><Navbar /></MemoryRouter>);
 
-    const divElement = screen.getByRole("favoriteBlue");
-    const buttonElement = screen.getByText("Favorite");
+
+    const buttonElement = screen.getByText("Favorites");
     fireEvent.click(buttonElement);
+    const divElement = screen.getByRole("favoriteBlue");
 
 
-    expect(divElement).toBeInTheDocument();
+    await expect(divElement).toBeInTheDocument();
 });
 
 
