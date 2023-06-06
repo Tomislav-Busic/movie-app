@@ -1,21 +1,17 @@
-/* import { act, renderHook, render } from "@testing-library/react";
-import userEvent from '@testing-library/user-event'
+import { screen, fireEvent, render } from "@testing-library/react";
 import '@testing-library/jest-dom';
 import { Navbar } from "./Navbar";
 
 
-//test block
-test("testing home location", () => {
-    // render the component on virtual dom
-    render(<Navbar />)
-    const { result } = renderHook(() => Navbar());
+//test Home button
+test("testing home button", () => {
+    render(<Navbar />);
 
-    act(() => {
-        result.current.toHomePage();
-    })
+    const divElement = screen.getByRole("homeBlue");
+    const buttonElement = screen.getByText("Home");
+    fireEvent.click(buttonElement);
 
-    expect(result.current.toggle).toBe(false);
+    expect(divElement).toBeInTheDocument();
 });
 
 
- */

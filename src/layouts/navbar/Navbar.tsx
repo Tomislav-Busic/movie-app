@@ -34,7 +34,7 @@ export const Navbar = () => {
                 >
                     {
                         toogle ?
-                            <AiOutlineHome role="homeGray" className={styled.icon__gray} />
+                            <AiOutlineHome className={styled.icon__gray} />
                             :
                             <AiFillHome role="homeBlue" className={styled.icon} />
                     }
@@ -48,9 +48,9 @@ export const Navbar = () => {
                 >
                     {
                         toogle ?
-                            <MdFavorite role="favoriteBlue" className={styled.icon} />
+                            <MdFavorite role="favoritBlue" className={styled.icon} />
                             :
-                            <MdOutlineFavoriteBorder role="favoriteGray" className={styled.icon__gray} />
+                            <MdOutlineFavoriteBorder className={styled.icon__gray} />
                     }
                     <p className={toogle ? "" : styled.active}>Favorites</p>
                 </Link>
