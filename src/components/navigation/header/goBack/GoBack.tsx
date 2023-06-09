@@ -16,7 +16,7 @@ export const GoBack = () => {
 
     return <>
         {active &&
-            <AiOutlineLeft className={styled.back} />
+            <AiOutlineLeft role="back" className={styled.back} />
         }
     </>;
 }
