@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Footer } from "./layouts/footer/Footer";
-import { Header } from "./layouts/header/Header";
-import { Navbar } from "./layouts/navbar/Navbar";
+import { StackLayout } from "./layouts/StackLayout";
 
 import { HomePage } from "./pages/HomePage";
 import { FavoritesPage } from "./pages/FavoritesPage";
@@ -13,13 +11,11 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Header />
+        <StackLayout />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>
-        <Navbar />
-        <Footer />
       </Router>
     </div>
   );
