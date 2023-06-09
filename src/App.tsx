@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { AndroidNavbar } from "./layouts/androidNavbar/AndroidNavbar";
+import { Footer } from "./layouts/footer/Footer";
 import { Header } from "./layouts/header/Header";
 import { Navbar } from "./layouts/navbar/Navbar";
 
@@ -19,7 +19,7 @@ function App() {
           <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>
         <Navbar />
-        <AndroidNavbar />
+        <Footer />
       </Router>
     </div>
   );

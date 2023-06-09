@@ -2,9 +2,9 @@ import line from "../../assets/images/line.png";
 import vector from "../../assets/images/vector.png";
 import back from "../../assets/images/back.png";
 
-import styled from "./androidNavbar.module.scss";
+import styled from "./footer.module.scss";
 
-export const AndroidNavbar = () => {
+export const Footer = () => {
     return (
         <div className={styled.and_navbar}>
             <div className={styled.buttons}>
