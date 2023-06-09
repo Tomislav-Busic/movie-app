@@ -1,4 +1,4 @@
-import logo from "../../../assets/images/TMDB-Logo.png";
+import logo from "../../../../assets/images/TMDB-Logo.png";
 
 import styled from "./logo.module.scss";
 

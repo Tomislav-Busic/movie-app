@@ -1,6 +1,6 @@
-import line from "../../assets/images/line.png";
-import vector from "../../assets/images/vector.png";
-import back from "../../assets/images/back.png";
+import line from "../../../assets/images/line.png";
+import vector from "../../../assets/images/vector.png";
+import back from "../../../assets/images/back.png";
 
 import styled from "./footer.module.scss";
 
