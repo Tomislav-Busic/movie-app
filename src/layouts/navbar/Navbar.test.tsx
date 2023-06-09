@@ -12,14 +12,12 @@ test("testing home button", () => {
     const buttonElement = screen.getByText("Home");
     fireEvent.click(buttonElement);
 
-
     expect(divElement).toBeInTheDocument();
 });
 
 //test Favorite button
 test("testing favorite button", async () => {
     render(<MemoryRouter><Navbar /></MemoryRouter>);
-
 
     const buttonElement = screen.getByText("Favorites");
     fireEvent.click(buttonElement);
