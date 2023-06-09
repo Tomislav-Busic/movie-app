@@ -1,10 +1,10 @@
-import { Logo } from "./logo/Logo";
+import { TmdbHeaderLogo } from "./tmdbHeaderLogo/TmdbHeaderLogo";
 import styled from "./header.module.scss";
 
 export const Header = () => {
     return (
         <div className={styled.navbar}>
-            <Logo />
+            <TmdbHeaderLogo />
         </div>
     )
 }
