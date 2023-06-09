@@ -13,7 +13,7 @@ test("show go back", () => {
 });
 
 
-//helper function I wrote to avoid having to repeat the boilerplate
+//helper function from stackOverflow to avoid having to repeat the boilerplate
 export async function expectNever(callable: () => unknown): Promise<void> {
     await expect(() => waitFor(callable)).rejects.toEqual(expect.anything());
 }
