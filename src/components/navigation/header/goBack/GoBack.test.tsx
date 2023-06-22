@@ -1,31 +1,29 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import '@testing-library/jest-dom/extend-expect';
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 import { MemoryRouter } from "react-router-dom";
+import { expectNever } from "../../../../test/utilities/utilities";
 import { GoBack } from "./GoBack";
 
-
 test("show go back", () => {
-    render(<MemoryRouter initialEntries={[{ pathname: '/favorites' }]}><GoBack /></MemoryRouter>);
+  render(
+    <MemoryRouter initialEntries={[{ pathname: "/favorites" }]}>
+      <GoBack />
+    </MemoryRouter>
+  );
 
-    const buttonElement = screen.getByRole("back");
+  const buttonElement = screen.getByRole("back");
 
-    expect(buttonElement).toBeInTheDocument();
+  expect(buttonElement).toBeInTheDocument();
 });
 
-
-//helper function from stackOverflow to avoid having to repeat the boilerplate
-export async function expectNever(callable: () => unknown): Promise<void> {
-    await expect(() => waitFor(callable)).rejects.toEqual(expect.anything());
-}
-
 test("hide go back", async () => {
-    render(
-        <MemoryRouter initialEntries={[{ pathname: '/' }]}>
-            <GoBack />
-        </MemoryRouter>
-    );
+  render(
+    <MemoryRouter initialEntries={[{ pathname: "/" }]}>
+      <GoBack />
+    </MemoryRouter>
+  );
 
-    await expectNever(() => {
-        expect(screen.getByRole("back")).toBeInTheDocument();
-    });
-})
+  await expectNever(() => {
+    expect(screen.getByRole("back")).toBeInTheDocument();
+  });
+});
