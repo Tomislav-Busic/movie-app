@@ -1,1 +1,12 @@
-{"version":3,"sources":["footer.module.scss","../../assets/styles/mixins/mixins.scss","footer.module.css","../../assets/styles/variables/variables.scss"],"names":[],"mappings":"AAGA;EACI,eAAA;EACA,YAAA;EACA,WAAA;EACA,YAAA;ECNF,aAAA;EACA,uBAAA;EACA,mBAAA;ACKF;AFGI;EACI,YAAA;EACA,YAAA;ECCJ,aAAA;EACA,8BAAA;ACDJ;AFEQ;EACI,WAAA;EACA,YAAA;ECXV,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,sBDSoC;EAC1B,qBAAA;EACA,SAAA;AEGZ;AFAY;EACI,WAAA;EACA,YAAA;AEEhB;AFCY;EACI,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,kBAAA;EACA,cGjCN;ADkCV;AFCgB;EACI,cGnCb;ADoCP","file":"footer.module.css"}
+{
+  "version": 3,
+  "sources": [
+    "footer.module.scss",
+    "../../assets/styles/mixins/mixins.scss",
+    "footer.module.css",
+    "../../assets/styles/variables/variables.scss"
+  ],
+  "names": [],
+  "mappings": "AAGA;EACI,eAAA;EACA,YAAA;EACA,WAAA;EACA,YAAA;ECNF,aAAA;EACA,uBAAA;EACA,mBAAA;ACKF;AFGI;EACI,YAAA;EACA,YAAA;ECCJ,aAAA;EACA,8BAAA;ACDJ;AFEQ;EACI,WAAA;EACA,YAAA;ECXV,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,sBDSoC;EAC1B,qBAAA;EACA,SAAA;AEGZ;AFAY;EACI,WAAA;EACA,YAAA;AEEhB;AFCY;EACI,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,kBAAA;EACA,cGjCN;ADkCV;AFCgB;EACI,cGnCb;ADoCP",
+  "file": "footer.module.css"
+}

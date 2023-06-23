@@ -2,50 +2,50 @@
 @import "../../../../assets/styles/mixins/mixins.scss";
 
 .search_container {
-    padding: 0 20px;
-    max-width: 400px;
-    width: 100%;
-    @include flex-space;
+  padding: 0 20px;
+  max-width: 400px;
+  width: 100%;
+  @include flex-space;
 
-    .search {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 8px 16px;
-        width: 274px;
-        height: 46px;
-        gap: 4px;
-        background: $bg-search;
-        border-radius: 10px; 
+  .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    width: 274px;
+    height: 46px;
+    gap: 4px;
+    background: $bg-search;
+    border-radius: 10px;
 
-        input {
-            padding: 4px;
-            width: 185px;
-            height: 30px;
-            border: none;
-            outline: none;
-            background: $bg-search;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 140%;
-            color: $bg-blue;
-        }
+    input {
+      padding: 4px;
+      width: 185px;
+      height: 30px;
+      border: none;
+      outline: none;
+      background: $bg-search;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color: $bg-blue;
+    }
 
-        .icon {
-            width: 18.75px;
-            height: 18.75px; 
-            cursor: pointer;   
-        }
-    } 
+    .icon {
+      width: 18.75px;
+      height: 18.75px;
+      cursor: pointer;
+    }
+  }
 
-    button {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
-        color: $bg-blue;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }  
+  button {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $bg-blue;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 }

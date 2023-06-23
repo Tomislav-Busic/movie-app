@@ -12,10 +12,10 @@
 }
 
 @mixin flex-space {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-@mixin background ($img) {
+@mixin background($img) {
   background: url($img) no-repeat center;
 }

@@ -1,1 +1,11 @@
-{"version":3,"sources":["app.scss","variables/variables.scss","app.css"],"names":[],"mappings":"AAEA;EACE,WAAA;EACA,YAAA;EACA,yBCJS;ACGX","file":"app.css"}
+{
+  "version": 3,
+  "sources": [
+    "app.scss",
+    "variables/variables.scss",
+    "app.css"
+  ],
+  "names": [],
+  "mappings": "AAEA;EACE,WAAA;EACA,YAAA;EACA,yBCJS;ACGX",
+  "file": "app.css"
+}
