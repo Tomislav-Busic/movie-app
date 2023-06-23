@@ -1,5 +1,3 @@
-import { MovieProps } from "../../models/movie.model";
-
 import { ImageContainer } from "./components/imageContainer/ImageContainer";
 
 export const Movie = () => {
