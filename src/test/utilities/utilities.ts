@@ -1,7 +1,6 @@
 import { waitFor } from "@testing-library/react";
 
 /*
-
 This function is used to test that a given callable (a function or an async function) 
 never resolves. It uses the expect and waitFor functions from Jest to check that the 
 callable does not resolve. 
