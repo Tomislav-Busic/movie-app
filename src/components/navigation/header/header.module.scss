@@ -8,6 +8,7 @@
   background-color: $bg-blue;
   display: flex;
   align-items: self-end;
+  z-index: 100;
 
   .container {
     margin: 0;

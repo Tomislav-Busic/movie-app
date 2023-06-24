@@ -1,4 +1,4 @@
-import { ImageContainer } from "./components/imageContainer/ImageContainer";
+import { MovieHeader } from "./components/imageContainer/MovieHeader";
 
 export const Movie = () => {
   const movie = {
@@ -9,11 +9,21 @@ export const Movie = () => {
     genre: ["Action", "Science Fiction", "Adventure"],
     time: "2h 6m",
     image: "image...(wait for api)",
+    description:
+      "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+    actors: [
+      { name: "Don Heck", profession: "Characters" },
+      { name: "Jack Kirby", profession: "Characters" },
+      { name: "Jon Favreau", profession: "Director" },
+      { name: "Don Heck", profession: "Screenplay" },
+      { name: "Jack Marcum", profession: "Screenplay" },
+      { name: "Matt Holloway", profession: "Screenplay" },
+    ],
   };
 
   return (
-    <div>
-      <ImageContainer {...movie} />
+    <div key={movie.id}>
+      <MovieHeader {...movie} />
     </div>
   );
 };

@@ -1,18 +1,19 @@
-import { MovieProps } from "../../../../models/movie.model";
+import { Movie } from "models/movie.model";
 
 import { AiOutlineStar } from "react-icons/ai";
-import imgIron from "../../../../assets/images/iron.jpg";
 
-import styled from "./imageContainer.module.scss";
+import styled from "./movieHeader.module.scss";
 
-export const ImageContainer: React.FC<MovieProps> = (movie) => {
+export const MovieHeader: React.FC<Movie> = (movie) => {
   const { year, country, genre, time, image } = movie;
+
+  const genres = genre.join(", ");
+
   return (
     <div
       className={styled.img_container}
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgb(0, 0, 0)),
-         url(${imgIron})`, // here wil be place for the image
+        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgb(0, 0, 0))`,
       }}
     >
       <div className={styled.score_download}>
@@ -29,9 +30,7 @@ export const ImageContainer: React.FC<MovieProps> = (movie) => {
           <div className={styled.country}>({country})</div>
         </div>
         <div className={styled.genre_time}>
-          <div className={styled.genre}>
-            {genre.map((item) => item).join(", ")}
-          </div>
+          <div className={styled.genre}>{genres}</div>
           <div className={styled.time}>{time}</div>
         </div>
       </div>
