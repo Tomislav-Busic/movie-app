@@ -1,4 +1,4 @@
-import { Favorites } from "../features/favorites";
+import { Favorites } from "features/favorites/Favorites";
 
 import styled from "./pages.module.scss";
 

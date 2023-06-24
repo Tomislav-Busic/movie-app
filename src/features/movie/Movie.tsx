@@ -1,4 +1,4 @@
-import { MovieHeader } from "./components/imageContainer/MovieHeader";
+import { MovieHeader } from "./components/movieHeader/MovieHeader";
 
 export const Movie = () => {
   const movie = {
