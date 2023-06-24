@@ -27,7 +27,9 @@ export const MovieHeader: React.FC<Movie> = (movie) => {
       <div className={styled.details}>
         <div className={styled.year_country}>
           <div className={styled.year}>{year}</div>
-          <div className={styled.country}>({country})</div>
+          <div role="document" className={styled.country}>
+            {country}
+          </div>
         </div>
         <div className={styled.genre_time}>
           <div className={styled.genre}>{genres}</div>
