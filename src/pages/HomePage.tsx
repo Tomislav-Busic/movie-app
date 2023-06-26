@@ -1,4 +1,4 @@
-import { Home } from "../features/home";
+import { Home } from "features/home/Home";
 
 import styled from "./pages.module.scss";
 

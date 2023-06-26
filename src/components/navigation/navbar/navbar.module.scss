@@ -1,11 +1,12 @@
-@import "../../../assets/styles/mixins/mixins.scss";
-@import "../../../assets/styles/variables/variables.scss";
+@import "~assets/styles/mixins/mixins.scss";
+@import "~assets/styles/variables/variables.scss";
 
 .footer {
+  padding-bottom: 30px;
   position: fixed;
-  bottom: 42px;
+  bottom: 0px;
   width: 100%;
-  height: 56px;
+  height: 90px;
   @include center;
   background-color: $bg-white;
 
