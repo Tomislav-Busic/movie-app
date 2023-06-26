@@ -4,26 +4,28 @@ import { MemoryRouter } from "react-router-dom";
 import { expectNever } from "../../../../test/utilities/utilities";
 import { GoBack } from "./GoBack";
 
-test("show go back", () => {
-  render(
-    <MemoryRouter initialEntries={[{ pathname: "/favorites" }]}>
-      <GoBack />
-    </MemoryRouter>
-  );
+describe("GoBack", () => {
+  it("will show go back btn", () => {
+    render(
+      <MemoryRouter initialEntries={[{ pathname: "/favorites" }]}>
+        <GoBack />
+      </MemoryRouter>
+    );
 
-  const buttonElement = screen.getByRole("back");
+    const buttonElement = screen.getByRole("back");
 
-  expect(buttonElement).toBeInTheDocument();
-});
+    expect(buttonElement).toBeInTheDocument();
+  });
 
-test("hide go back", async () => {
-  render(
-    <MemoryRouter initialEntries={[{ pathname: "/" }]}>
-      <GoBack />
-    </MemoryRouter>
-  );
+  it("will hide go back button", async () => {
+    render(
+      <MemoryRouter initialEntries={[{ pathname: "/" }]}>
+        <GoBack />
+      </MemoryRouter>
+    );
 
-  await expectNever(() => {
-    expect(screen.getByRole("back")).toBeInTheDocument();
+    await expectNever(() => {
+      expect(screen.getByRole("back")).toBeInTheDocument();
+    });
   });
 });
