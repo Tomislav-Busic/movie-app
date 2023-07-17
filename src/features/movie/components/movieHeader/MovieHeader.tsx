@@ -14,7 +14,7 @@ export const MovieHeader: React.FC<MovieProps> = ({ movie }) => {
       aria-roledescription="movieHeader"
       className={styled.img_container}
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgb(0, 0, 0))`,
+        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgb(0, 0, 0)), url(${image})`,
       }}
     >
       <div className={styled.score_download}>

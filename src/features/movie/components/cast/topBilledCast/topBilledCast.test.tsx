@@ -1,30 +1,28 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { movie } from "fakeData/data";
-import { Overview } from "./Overview";
+import { TopBilledCast } from "./TopBilledCast";
 
-describe("Overview", () => {
-  it("should render Overview", () => {
+describe("TopBilledCast", () => {
+  it("should render TopBilledCast", () => {
     const { getByText } = render(
       <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Overview movie={movie} />
+        <TopBilledCast topbc={movie.top_billed_cast} />
       </MemoryRouter>
     );
 
     expect(getByText).not.toBeNull();
   });
 
-  it("should render description, actors", async () => {
+  it("should render equal actors length", async () => {
     render(
       <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Overview movie={movie} />
+        <TopBilledCast topbc={movie.top_billed_cast} />
       </MemoryRouter>
     );
 
-    const description = await waitFor(() => screen.findByTitle("description"));
     const actors = await waitFor(() => screen.findAllByRole("listitem"));
 
-    expect(description.textContent).toEqual(movie?.description);
-    expect(actors.length).toEqual(movie?.actors.length);
+    expect(actors.length).toEqual(movie?.top_billed_cast.length);
   });
 });
