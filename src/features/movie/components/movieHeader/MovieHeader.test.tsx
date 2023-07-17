@@ -1,35 +1,34 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { movie } from "root/data";
 import { MovieHeader } from "./MovieHeader";
 
-const movie = {
-  id: "1",
-  title: "Iron Man",
-  year: "05/02/2008",
-  country: "(US)",
-  genre: ["Action", "Science Fiction", "Adventure"],
-  time: "2h 6m",
-  image: "image...(wait for api)",
-  description:
-    "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-  actors: [
-    { name: "Don Heck", profession: "Characters" },
-    { name: "Jack Kirby", profession: "Characters" },
-    { name: "Jon Favreau", profession: "Director" },
-    { name: "Don Heck", profession: "Screenplay" },
-    { name: "Jack Marcum", profession: "Screenplay" },
-    { name: "Matt Holloway", profession: "Screenplay" },
-  ],
-};
+describe("MovieHeader", () => {
+  it("should render MovieHeader", () => {
+    const { getByText } = render(
+      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
+        <MovieHeader movie={movie} />
+      </MemoryRouter>
+    );
 
-test("movie header", () => {
-  render(
-    <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-      <MovieHeader {...movie} />
-    </MemoryRouter>
-  );
+    expect(getByText).not.toBeNull();
+  });
 
-  let description = screen.getByRole("document");
+  it("should render year, country, genres, time", async () => {
+    render(
+      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
+        <MovieHeader movie={movie} />
+      </MemoryRouter>
+    );
 
-  expect(description.textContent).toEqual(movie.country);
+    const year = await waitFor(() => screen.findByTitle("year"));
+    const country = await waitFor(() => screen.findByTitle("country"));
+    const time = await waitFor(() => screen.findByTitle("time"));
+    const genres = await waitFor(() => screen.findByTitle("genre"));
+
+    expect(year.textContent).toEqual(movie?.year);
+    expect(country.textContent).toEqual(movie?.country);
+    expect(time.textContent).toEqual(movie?.time);
+    expect(genres.textContent).toEqual(movie?.genre.join(", "));
+  });
 });

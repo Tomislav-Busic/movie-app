@@ -1,35 +1,30 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { movie } from "root/data";
 import { Overview } from "./Overview";
 
-const movie = {
-  id: "1",
-  title: "Iron Man",
-  year: "05/02/2008",
-  country: "US",
-  genre: ["Action", "Science Fiction", "Adventure"],
-  time: "2h 6m",
-  image: "image...(wait for api)",
-  description:
-    "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-  actors: [
-    { name: "Don Heck", profession: "Characters" },
-    { name: "Jack Kirby", profession: "Characters" },
-    { name: "Jon Favreau", profession: "Director" },
-    { name: "Don Heck", profession: "Screenplay" },
-    { name: "Jack Marcum", profession: "Screenplay" },
-    { name: "Matt Holloway", profession: "Screenplay" },
-  ],
-};
+describe("Overview", () => {
+  it("should render Overview", () => {
+    const { getByText } = render(
+      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
+        <Overview movie={movie} />
+      </MemoryRouter>
+    );
 
-test("overview", () => {
-  render(
-    <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-      <Overview {...movie} />
-    </MemoryRouter>
-  );
+    expect(getByText).not.toBeNull();
+  });
 
-  let description = screen.getByRole("document");
+  it("should render description, actors", async () => {
+    render(
+      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
+        <Overview movie={movie} />
+      </MemoryRouter>
+    );
 
-  expect(description.textContent).toEqual(movie.description);
+    const description = await waitFor(() => screen.findByTitle("description"));
+    const actors = await waitFor(() => screen.findAllByRole("listitem"));
+
+    expect(description.textContent).toEqual(movie?.description);
+    expect(actors.length).toEqual(movie?.actors.length);
+  });
 });
