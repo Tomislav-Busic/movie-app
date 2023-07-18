@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { movie } from "root/data";
+import { movie } from "fakeData/data";
 import { MovieHeader } from "./MovieHeader";
 
 describe("MovieHeader", () => {

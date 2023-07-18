@@ -12,7 +12,11 @@ export const Navbar = () => {
   let location = useLocation();
 
   useEffect(() => {
-    location.pathname !== "/" ? setToogle(true) : setToogle(false);
+    if (location.pathname === "/") {
+      setToogle(false);
+    } else if (location.pathname === "/favorites") {
+      setToogle(true);
+    }
   }, [location.pathname]);
 
   const toHomePage = () => {
