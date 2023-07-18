@@ -1,25 +1,16 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
 import { movie } from "fakeData/data";
 import { Overview } from "./Overview";
 
 describe("Overview", () => {
   it("should render Overview", () => {
-    const { getByText } = render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Overview movie={movie} />
-      </MemoryRouter>
-    );
+    const { getByText } = render(<Overview movie={movie} />);
 
     expect(getByText).not.toBeNull();
   });
 
   it("should render description, actors", async () => {
-    render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Overview movie={movie} />
-      </MemoryRouter>
-    );
+    render(<Overview movie={movie} />);
 
     const description = await waitFor(() => screen.findByTitle("description"));
     const actors = await waitFor(() => screen.findAllByRole("listitem"));

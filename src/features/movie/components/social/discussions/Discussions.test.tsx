@@ -1,26 +1,19 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { MemoryRouter } from "react-router-dom";
 import { movie } from "fakeData/data";
 import { Discussions } from "./Discussions";
 
 describe("Discussions", () => {
   it("should render Discussions", () => {
     const { getByText } = render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Discussions discussions={movie.discussions} />
-      </MemoryRouter>
+      <Discussions discussions={movie.discussions} />
     );
 
     expect(getByText).not.toBeNull();
   });
 
   it("should render equal discussions length", async () => {
-    render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Discussions discussions={movie.discussions} />
-      </MemoryRouter>
-    );
+    render(<Discussions discussions={movie.discussions} />);
 
     const discussions = await waitFor(() => screen.findAllByRole("listitem"));
 
@@ -28,11 +21,7 @@ describe("Discussions", () => {
   });
 
   it("toggle changes button content", async () => {
-    render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Discussions discussions={movie.discussions} />
-      </MemoryRouter>
-    );
+    render(<Discussions discussions={movie.discussions} />);
 
     const buttons = await waitFor(() => screen.findAllByRole("button"));
 

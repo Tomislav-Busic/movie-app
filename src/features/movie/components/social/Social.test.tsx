@@ -1,27 +1,18 @@
 import { screen, fireEvent, render, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { MemoryRouter } from "react-router-dom";
 import { expectNever } from "test/utilities/utilities";
 import { Social } from "./Social";
 import { movie } from "fakeData/data";
 
 describe("Social", () => {
   it("should render Social", () => {
-    const { getByText } = render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Social movie={movie} />
-      </MemoryRouter>
-    );
+    const { getByText } = render(<Social movie={movie} />);
 
     expect(getByText).not.toBeNull();
   });
 
   it("should be active Reviews", async () => {
-    render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Social movie={movie} />
-      </MemoryRouter>
-    );
+    render(<Social movie={movie} />);
 
     const button = screen.getByText(`Reviews (${movie.reviews.length})`);
     fireEvent.click(button);
@@ -36,11 +27,7 @@ describe("Social", () => {
   });
 
   it("should be active Discussions", async () => {
-    render(
-      <MemoryRouter>
-        <Social movie={movie} />
-      </MemoryRouter>
-    );
+    render(<Social movie={movie} />);
     const button = screen.getByText(
       `Discussions (${movie.discussions.length})`
     );

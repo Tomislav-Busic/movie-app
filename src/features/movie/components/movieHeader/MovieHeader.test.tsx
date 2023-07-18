@@ -1,25 +1,16 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
 import { movie } from "fakeData/data";
 import { MovieHeader } from "./MovieHeader";
 
 describe("MovieHeader", () => {
   it("should render MovieHeader", () => {
-    const { getByText } = render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <MovieHeader movie={movie} />
-      </MemoryRouter>
-    );
+    const { getByText } = render(<MovieHeader movie={movie} />);
 
     expect(getByText).not.toBeNull();
   });
 
   it("should render year, country, genres, time", async () => {
-    render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <MovieHeader movie={movie} />
-      </MemoryRouter>
-    );
+    render(<MovieHeader movie={movie} />);
 
     const year = await waitFor(() => screen.findByTitle("year"));
     const country = await waitFor(() => screen.findByTitle("country"));
