@@ -1,20 +1,25 @@
-import { MovieProps } from "models/movie.model";
+import { MovieDetails } from "models/movie/movieDetails.model";
 
 import { AiOutlineStar } from "react-icons/ai";
 
 import styled from "./movieHeader.module.scss";
 
-export const MovieHeader: React.FC<MovieProps> = ({ movie }) => {
-  const { year, country, genre, time, image } = movie;
-
-  const genres = genre.join(", ");
+export const MovieHeader: React.FC<MovieDetails> = ({
+  release_date,
+  backdrop_path,
+  runtime,
+  genres,
+  production_countries,
+}) => {
+  const genre = genres.join(", ");
+  const countries = production_countries.join(", ");
 
   return (
     <div
       aria-roledescription="movieHeader"
       className={styled.img_container}
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgb(0, 0, 0)), url(${image})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgb(0, 0, 0)), url(${backdrop_path})`,
       }}
     >
       <div className={styled.score_download}>
@@ -28,18 +33,18 @@ export const MovieHeader: React.FC<MovieProps> = ({ movie }) => {
       <div className={styled.details}>
         <div className={styled.year_country}>
           <div title="year" className={styled.year}>
-            {year}
+            {release_date}
           </div>
           <div title="country" className={styled.country}>
-            {country}
+            {countries}
           </div>
         </div>
         <div className={styled.genre_time}>
           <div title="genre" className={styled.genre}>
-            {genres}
+            {genre}
           </div>
           <div title="time" className={styled.time}>
-            {time}
+            {runtime}
           </div>
         </div>
       </div>
