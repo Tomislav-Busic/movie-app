@@ -1,20 +1,34 @@
-export interface CastCrew {
+export interface Cast {
   adult: boolean;
-  gender?: number | null;
-  id?: number | null;
-  known_for_department?: string | null;
-  name?: string | null;
-  original_name?: string | null;
-  popularity?: number | null;
-  profile_path?: string | null;
-  cast_id?: number | null;
-  character?: string | null;
-  credit_id?: string | null;
-  order?: number | null;
+  gender: number;
+  id: number;
+  known_for_department: string;
+  name: string;
+  original_name: string;
+  popularity: number;
+  profile_path: string | undefined | null;
+  cast_id: number;
+  character: string;
+  credit_id: string;
+  order: number;
+}
+
+export interface Crew {
+  adult: boolean;
+  gender: number;
+  id: number;
+  known_for_department: string;
+  name: string;
+  original_name: string;
+  popularity: number;
+  profile_path: string | null;
+  credit_id: string;
+  department: string;
+  job: string;
 }
 
 export interface MovieCredits {
   id: number;
-  cast: CastCrew[];
-  crew: CastCrew[];
+  cast: Cast[];
+  crew: Crew[];
 }

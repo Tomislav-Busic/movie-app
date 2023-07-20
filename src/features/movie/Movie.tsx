@@ -3,7 +3,7 @@ import { movieCredits } from "fakeData/movieCredits";
 
 import { MovieHeader } from "./components/movieHeader/MovieHeader";
 import { Overview } from "./components/overview/Overview";
-import { CastAndCrew } from "./components/cast/CastAndCrew";
+import { CastAndCrew } from "./components/castAndCrew/CastAndCrew";
 import { Social } from "./components/social/Social";
 
 export const Movie = () => {

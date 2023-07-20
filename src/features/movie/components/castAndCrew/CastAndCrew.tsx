@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-import { CastCrew } from "models/movie/movieCredits.model";
+import { Cast, Crew } from "models/movie/movieCredits.model";
 
-import { FullCastAndCrew } from "./fullCast&Crew/FullCastAndCrew";
-import { TopBilledCast } from "./topBilledCast/TopBilledCast";
+import { FullCrew } from "./fullCrew/FullCrew";
+import { TopBilledCast } from "./cast/TopBilledCast";
 
 import style from "./cast.module.scss";
 
 interface CastCrewTypes {
-  cast: CastCrew[];
-  crew: CastCrew[];
+  cast: Cast[];
+  crew: Crew[];
 }
 
 export const CastAndCrew: React.FC<CastCrewTypes> = ({ cast, crew }) => {
@@ -32,17 +32,17 @@ export const CastAndCrew: React.FC<CastCrewTypes> = ({ cast, crew }) => {
             setShowCast(false)
           }
         >
-          Full Cast & Crew
+          Full Crew
         </button>
       </div>
       <div className={style.cast_container}>
         {showCast ? (
-          <div title="topbc">
-            <TopBilledCast topbc={cast} />
+          <div title="cast">
+            <TopBilledCast cast={cast} />
           </div>
         ) : (
-          <div title="fullcac">
-            <FullCastAndCrew fullcac={crew} />
+          <div title="crew">
+            <FullCrew crew={crew} />
           </div>
         )}
       </div>
