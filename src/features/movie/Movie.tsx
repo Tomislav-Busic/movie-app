@@ -1,4 +1,6 @@
 import { movieDetails } from "fakeData/movieDetails";
+import { movieCredits } from "fakeData/movieCredits";
+
 import { MovieHeader } from "./components/movieHeader/MovieHeader";
 import { Overview } from "./components/overview/Overview";
 import { Cast } from "./components/cast/Cast";
@@ -14,9 +16,9 @@ export const Movie = () => {
         runtime={movieDetails.runtime}
         backdrop_path={movieDetails.backdrop_path}
       />
-      {/* <Overview movie={movie} />
-      <Cast movie={movie} />
-      <Social movie={movie} /> */}
+      {/*<Overview movie={movie} />*/}
+      <Cast cast={movieCredits.cast} crew={movieCredits.crew} />
+      {/* <Social movie={movie} /> */}
     </div>
   );
 };

@@ -1,15 +1,14 @@
 import { useState } from "react";
 
-import { MovieProps } from "models/movie.model";
+import { MovieCredits } from "models/movie/movieCredits.model";
 
 import { FullCastAndCrew } from "./fullCast&Crew/FullCastAndCrew";
 import { TopBilledCast } from "./topBilledCast/TopBilledCast";
 
 import style from "./cast.module.scss";
 
-export const Cast: React.FC<MovieProps> = ({ movie }) => {
-  const [showTopBilledCast, setShowTopBilledCast] = useState<boolean>(true);
-  const { top_billed_cast, full_cast_and_crew } = movie;
+export const Cast: React.FC<MovieCredits> = ({ cast, crew }) => {
+  const [showCast, setShowCast] = useState<boolean>(true);
 
   return (
     <div className={style.cast}>

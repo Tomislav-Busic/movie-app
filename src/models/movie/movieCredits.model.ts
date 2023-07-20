@@ -1,4 +1,4 @@
-export interface Cast {
+export interface CastProps {
   adult: boolean;
   gender: number;
   id: number;
