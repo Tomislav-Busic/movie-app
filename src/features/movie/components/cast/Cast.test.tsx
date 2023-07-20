@@ -1,7 +1,7 @@
 import { screen, fireEvent, render, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { expectNever } from "test/utilities/utilities";
-import { Cast } from "./Cast";
+import { Cast } from "./CastAndCrew";
 import { movie } from "fakeData/data";
 
 describe("Cast", () => {

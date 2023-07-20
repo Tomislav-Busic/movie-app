@@ -3,7 +3,7 @@ import { movieCredits } from "fakeData/movieCredits";
 
 import { MovieHeader } from "./components/movieHeader/MovieHeader";
 import { Overview } from "./components/overview/Overview";
-import { Cast } from "./components/cast/Cast";
+import { CastAndCrew } from "./components/cast/CastAndCrew";
 import { Social } from "./components/social/Social";
 
 export const Movie = () => {
@@ -17,7 +17,7 @@ export const Movie = () => {
         backdrop_path={movieDetails.backdrop_path}
       />
       {/*<Overview movie={movie} />*/}
-      <Cast cast={movieCredits.cast} crew={movieCredits.crew} />
+      <CastAndCrew cast={movieCredits.cast} crew={movieCredits.crew} />
       {/* <Social movie={movie} /> */}
     </div>
   );
