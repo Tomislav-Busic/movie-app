@@ -1,18 +1,28 @@
-import { MovieDetails } from "models/movie/movieDetails.model";
-
 import { AiOutlineStar } from "react-icons/ai";
 
 import styled from "./movieHeader.module.scss";
 
-export const MovieHeader: React.FC<MovieDetails> = ({
+interface MovieHeaderProps {
+  release_date: string;
+  backdrop_path: string;
+  runtime: number;
+  genres: { id: number; name: string }[];
+  production_countries: { iso_3166_1: string; name: string }[];
+}
+
+export const MovieHeader: React.FC<MovieHeaderProps> = ({
   release_date,
   backdrop_path,
   runtime,
   genres,
   production_countries,
 }) => {
-  const genre = genres.join(", ");
-  const countries = production_countries.join(", ");
+  const formattedCountries =
+    production_countries &&
+    production_countries.map((country) => country.name).join(", ");
+
+  const formattedGenres =
+    genres && genres.map((genre) => genre.name).join(", ");
 
   return (
     <div
@@ -36,12 +46,12 @@ export const MovieHeader: React.FC<MovieDetails> = ({
             {release_date}
           </div>
           <div title="country" className={styled.country}>
-            {countries}
+            {formattedCountries}
           </div>
         </div>
         <div className={styled.genre_time}>
           <div title="genre" className={styled.genre}>
-            {genre}
+            {formattedGenres}
           </div>
           <div title="time" className={styled.time}>
             {runtime}
