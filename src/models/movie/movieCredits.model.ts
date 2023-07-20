@@ -1,4 +1,4 @@
-export interface CastProps {
+export interface CastCrew {
   adult: boolean;
   gender: number;
   id: number;
@@ -15,6 +15,6 @@ export interface CastProps {
 
 export interface MovieCredits {
   id: number;
-  cast: Cast[];
-  crew: Cast[];
+  cast: CastCrew[];
+  crew: CastCrew[];
 }
