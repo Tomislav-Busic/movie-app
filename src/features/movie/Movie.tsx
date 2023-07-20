@@ -16,7 +16,7 @@ export const Movie = () => {
         runtime={movieDetails.runtime}
         backdrop_path={movieDetails.backdrop_path}
       />
-      {/*<Overview movie={movie} />*/}
+      <Overview overview={movieDetails.overview} cast={movieCredits.cast} />
       <CastAndCrew cast={movieCredits.cast} crew={movieCredits.crew} />
       {/* <Social movie={movie} /> */}
     </div>
