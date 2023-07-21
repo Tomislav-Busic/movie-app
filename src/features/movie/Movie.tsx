@@ -1,16 +1,25 @@
-import { movie } from "fakeData/data";
+import { movieDetails } from "fakeData/movieDetails";
+import { movieCredits } from "fakeData/movieCredits";
+import { movieReviews } from "fakeData/movieReviews";
+
 import { MovieHeader } from "./components/movieHeader/MovieHeader";
 import { Overview } from "./components/overview/Overview";
-import { Cast } from "./components/cast/Cast";
+import { CastAndCrew } from "./components/castAndCrew/CastAndCrew";
 import { Social } from "./components/social/Social";
 
 export const Movie = () => {
   return (
-    <div key={movie.id}>
-      <MovieHeader movie={movie} />
-      <Overview movie={movie} />
-      <Cast movie={movie} />
-      <Social movie={movie} />
+    <div key={movieDetails.id}>
+      <MovieHeader
+        release_date={movieDetails.release_date}
+        production_countries={movieDetails.production_countries}
+        genres={movieDetails.genres}
+        runtime={movieDetails.runtime}
+        backdrop_path={movieDetails.backdrop_path}
+      />
+      <Overview overview={movieDetails.overview} cast={movieCredits.cast} />
+      <CastAndCrew cast={movieCredits.cast} crew={movieCredits.crew} />
+      <Social results={movieReviews?.results} />
     </div>
   );
 };

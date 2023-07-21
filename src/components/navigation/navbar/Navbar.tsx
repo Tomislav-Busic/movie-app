@@ -1,55 +1,53 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 import { AiFillHome, AiOutlineHome } from "react-icons/ai";
 import { MdFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
 
 import styled from "./navbar.module.scss";
 
+enum NavItem {
+  Home = "/",
+  Favorites = "/favorites",
+}
+
 export const Navbar = () => {
-  const [toogle, setToogle] = useState(false);
+  const [selected, setSelected] = useState<string>(NavItem.Home);
   let location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/") {
-      setToogle(false);
-    } else if (location.pathname === "/favorites") {
-      setToogle(true);
-    }
+    setSelected(location.pathname);
   }, [location.pathname]);
-
-  const toHomePage = () => {
-    setToogle(false);
-  };
-
-  const toFavoritesPage = () => {
-    setToogle(true);
-  };
 
   return (
     <div className={styled.footer}>
       <div className={styled.container}>
-        <Link to="/" className={styled.frame} onClick={toHomePage}>
-          {toogle ? (
-            <AiOutlineHome className={styled.icon__gray} />
-          ) : (
+        <Link
+          to={NavItem.Home}
+          className={`${styled.frame} ${
+            selected === NavItem.Home ? styled.active : ""
+          }`}
+          onClick={() => setSelected(NavItem.Home)}
+        >
+          {selected === NavItem.Home ? (
             <AiFillHome role="homeBlue" className={styled.icon} />
+          ) : (
+            <AiOutlineHome className={styled.icon__gray} />
           )}
-
-          <p className={toogle ? styled.active : ""}>Home</p>
+          <p>Home</p>
         </Link>
         <Link
-          to="/favorites"
-          className={styled.frame}
-          onClick={toFavoritesPage}
+          to={NavItem.Favorites}
+          className={`${styled.frame} ${
+            selected === NavItem.Favorites ? styled.active : ""
+          }`}
+          onClick={() => setSelected(NavItem.Favorites)}
         >
-          {toogle ? (
+          {selected === NavItem.Favorites ? (
             <MdFavorite role="favoriteBlue" className={styled.icon} />
           ) : (
             <MdOutlineFavoriteBorder className={styled.icon__gray} />
           )}
-          <p className={toogle ? "" : styled.active}>Favorites</p>
+          <p>Favorites</p>
         </Link>
       </div>
     </div>

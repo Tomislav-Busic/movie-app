@@ -1,30 +1,30 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import { movie } from "fakeData/data";
 import { Overview } from "./Overview";
+
+const mockOverview = {
+  overview: "Overview",
+};
+
+const mockCast = {
+  cast: [],
+};
 
 describe("Overview", () => {
   it("should render Overview", () => {
     const { getByText } = render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Overview movie={movie} />
-      </MemoryRouter>
+      <Overview overview={mockOverview.overview} cast={mockCast.cast} />
     );
 
     expect(getByText).not.toBeNull();
   });
 
   it("should render description, actors", async () => {
-    render(
-      <MemoryRouter initialEntries={[{ pathname: "/movie/:id" }]}>
-        <Overview movie={movie} />
-      </MemoryRouter>
-    );
+    render(<Overview overview={mockOverview.overview} cast={mockCast.cast} />);
 
     const description = await waitFor(() => screen.findByTitle("description"));
     const actors = await waitFor(() => screen.findAllByRole("listitem"));
 
-    expect(description.textContent).toEqual(movie?.description);
-    expect(actors.length).toEqual(movie?.actors.length);
+    expect(description.textContent).toEqual(mockOverview.overview);
+    expect(actors.length).toEqual(mockCast.cast.length);
   });
 });
