@@ -17,6 +17,11 @@ export const Reviews: React.FC<ReviewsProps> = ({ results }) => {
     return formattedDate;
   };
 
+  const removeFirstForwardSlash = (imgPath: string) => {
+    const path = imgPath?.substring(1);
+    return path;
+  };
+
   return (
     <div className={style.container}>
       {results &&
@@ -24,7 +29,9 @@ export const Reviews: React.FC<ReviewsProps> = ({ results }) => {
           <div className={style.element} key={index}>
             <div className={style.element_header}>
               <img
-                src={review?.author_details.avatar_path as string}
+                src={removeFirstForwardSlash(
+                  review?.author_details.avatar_path as string
+                )}
                 alt="avatar"
               />
               <div className={style.title_date}>
