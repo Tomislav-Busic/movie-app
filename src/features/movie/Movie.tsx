@@ -19,7 +19,7 @@ export const Movie = () => {
       />
       <Overview overview={movieDetails.overview} cast={movieCredits.cast} />
       <CastAndCrew cast={movieCredits.cast} crew={movieCredits.crew} />
-      <Social results={movieReviews.results} />
+      <Social results={movieReviews?.results} />
     </div>
   );
 };
