@@ -1,13 +1,13 @@
 interface AuthorDetails {
-  name: string;
-  username: string;
-  avatar_path: string;
-  rating: number;
+  name: string | null;
+  username: string | null;
+  avatar_path: string | null;
+  rating: number | null;
 }
 
-interface Results {
+export interface MovieReviewsResults {
   author: string;
-  author_details: AuthorDetails[];
+  author_details: AuthorDetails;
   content: string;
   created_at: string;
   id: string;
@@ -18,7 +18,7 @@ interface Results {
 export interface MovieReviews {
   id: number;
   page: number;
-  results: Results[];
+  results: MovieReviewsResults[];
   total_pages: number;
   total_results: number;
 }

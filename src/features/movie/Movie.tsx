@@ -1,5 +1,6 @@
 import { movieDetails } from "fakeData/movieDetails";
 import { movieCredits } from "fakeData/movieCredits";
+import { movieReviews } from "fakeData/movieReviews";
 
 import { MovieHeader } from "./components/movieHeader/MovieHeader";
 import { Overview } from "./components/overview/Overview";
@@ -18,7 +19,7 @@ export const Movie = () => {
       />
       <Overview overview={movieDetails.overview} cast={movieCredits.cast} />
       <CastAndCrew cast={movieCredits.cast} crew={movieCredits.crew} />
-      {/* <Social movie={movie} /> */}
+      <Social results={movieReviews.results} />
     </div>
   );
 };

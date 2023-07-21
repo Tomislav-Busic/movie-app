@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 
-import { DiscussionProps } from "models/movie.model";
+import { MovieReviewsResults } from "models/movie/movieReviews.model";
 
 import style from "./reviews.module.scss";
 
-interface DiscussionsProps {
-  reviews: DiscussionProps[];
+interface ReviewsProps {
+  results: MovieReviewsResults[];
 }
 
-export const Reviews: React.FC<DiscussionsProps> = ({ reviews }) => {
+export const Reviews: React.FC<ReviewsProps> = ({ results }) => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
     <div className={style.container}>
-      {reviews.map((review, index) => (
+      {results.map((review, index) => (
         <div className={style.element} key={index}>
           <div className={style.element_header}>
-            <img src={review.image} alt="discussions-img" />
+            <img src={review.url} alt="discussions-img" />
             <div className={style.title_date}>
-              <h3>A review by {review.name}</h3>
+              <h3>A review by {review.author_details.username}</h3>
               <p>
-                Written by <span>{review.name}</span> on {review.date}
+                Written by <span>{review.author_details.username}</span> on{" "}
+                {review.created_at}
               </p>
             </div>
           </div>
